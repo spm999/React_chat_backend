@@ -5,6 +5,9 @@ const cors = require('cors');
 const { addUser, removeUser, getUser,
 	getUsersInRoom } = require("./users.js");
 
+const PORT=process.env.PORT || 5000;
+const router=require('./router.js');
+
 // process.env.PORT="https://reactchat-ijnk.onrender.com/"
 const app = express();
 const server = http.createServer(app);
@@ -95,7 +98,7 @@ io.on("connection", (socket) => {
 })
 
 
-server.listen(process.env.PORT || 5000,
+server.listen(PORT || 5000,
 	() => console.log(`Server has started.`));
 
 
