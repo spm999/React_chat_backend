@@ -9,6 +9,8 @@ const { addUser, removeUser, getUser,
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+
+app.use(router);
 app.use(cors())
 
 // const io = new Server(server, {
