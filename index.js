@@ -5,7 +5,7 @@ const cors = require('cors');
 const { addUser, removeUser, getUser,
 	getUsersInRoom } = require("./users.js");
 
-
+process.env.PORT=`https://reactchat-ijnk.onrender.com/`
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
